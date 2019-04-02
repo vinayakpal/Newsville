@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Ubuntu-Regular.ttf">
+            <string>Ubuntu-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--SplashVC-->
         <scene sceneID="fRU-eI-Ofz">
@@ -25,11 +30,23 @@
                                     <constraint firstAttribute="width" constant="120" id="TwH-tP-b0q"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="powered by NewsAPI.org" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyF-QA-Xg0">
+                                <rect key="frame" x="112.5" y="641" width="150" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="eeI-ex-CJf"/>
+                                    <constraint firstAttribute="width" constant="150" id="qar-g2-DHh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Ubuntu-Regular" family="Ubuntu" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BfM-jb-HhZ" firstAttribute="centerX" secondItem="ooh-ls-SDP" secondAttribute="centerX" id="7pS-L4-edZ"/>
                             <constraint firstItem="BfM-jb-HhZ" firstAttribute="centerY" secondItem="ooh-ls-SDP" secondAttribute="centerY" id="Odo-50-Gxc"/>
+                            <constraint firstItem="bnW-1n-Cme" firstAttribute="bottom" secondItem="vyF-QA-Xg0" secondAttribute="bottom" constant="10" id="aUo-yq-K6R"/>
+                            <constraint firstItem="vyF-QA-Xg0" firstAttribute="centerX" secondItem="ooh-ls-SDP" secondAttribute="centerX" id="rE4-j4-KJV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bnW-1n-Cme"/>
                     </view>

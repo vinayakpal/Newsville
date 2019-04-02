@@ -12,6 +12,13 @@
 		3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718392254092F003AE86C /* LaunchScreen.storyboard */; };
 		3A17184322540DD2003AE86C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17184222540DD2003AE86C /* SplashVC.swift */; };
 		3A17184522540DE1003AE86C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184422540DE1003AE86C /* Splash.storyboard */; };
+		3A17184E225413EF003AE86C /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */; };
+		3A17184F225413EF003AE86C /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */; };
+		3A171850225413EF003AE86C /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */; };
+		3A171851225413EF003AE86C /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */; };
+		3A171852225413EF003AE86C /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184D225413EF003AE86C /* UFL.txt */; };
+		3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A171853225417BA003AE86C /* OnboardingVC.swift */; };
+		3A171856225417C7003AE86C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A171855225417C7003AE86C /* Onboarding.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		3A17183C2254092F003AE86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A17184222540DD2003AE86C /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		3A17184422540DE1003AE86C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
+		3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		3A17184D225413EF003AE86C /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
+		3A171853225417BA003AE86C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		3A171855225417C7003AE86C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +72,7 @@
 				3A1718372254092F003AE86C /* Assets.xcassets */,
 				3A1718392254092F003AE86C /* LaunchScreen.storyboard */,
 				3A17183C2254092F003AE86C /* Info.plist */,
+				3A17184722541393003AE86C /* Fonts */,
 				3A17184622540DF5003AE86C /* View */,
 			);
 			path = Newsville;
@@ -68,8 +83,30 @@
 			children = (
 				3A17184222540DD2003AE86C /* SplashVC.swift */,
 				3A17184422540DE1003AE86C /* Splash.storyboard */,
+				3A171853225417BA003AE86C /* OnboardingVC.swift */,
+				3A171855225417C7003AE86C /* Onboarding.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		3A17184722541393003AE86C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				3A171848225413EF003AE86C /* Ubuntu */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3A171848225413EF003AE86C /* Ubuntu */ = {
+			isa = PBXGroup;
+			children = (
+				3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */,
+				3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */,
+				3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */,
+				3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */,
+				3A17184D225413EF003AE86C /* UFL.txt */,
+			);
+			path = Ubuntu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +169,12 @@
 			files = (
 				3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */,
 				3A1718382254092F003AE86C /* Assets.xcassets in Resources */,
+				3A171851225413EF003AE86C /* Ubuntu-Light.ttf in Resources */,
+				3A171850225413EF003AE86C /* Ubuntu-Bold.ttf in Resources */,
+				3A171852225413EF003AE86C /* UFL.txt in Resources */,
+				3A17184E225413EF003AE86C /* Ubuntu-Medium.ttf in Resources */,
+				3A171856225417C7003AE86C /* Onboarding.storyboard in Resources */,
+				3A17184F225413EF003AE86C /* Ubuntu-Regular.ttf in Resources */,
 				3A17184522540DE1003AE86C /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A1718312254092E003AE86C /* AppDelegate.swift in Sources */,
+				3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */,
 				3A17184322540DD2003AE86C /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
