@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // added splash screen as root view controller
+        let storyBoard = UIStoryboard(name: "Splash", bundle: nil)
+        let splashVC = storyBoard.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+        self.window?.rootViewController = splashVC
+        
         // Override point for customization after application launch.
         return true
     }

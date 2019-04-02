@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		3A1718312254092E003AE86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1718302254092E003AE86C /* AppDelegate.swift */; };
-		3A1718332254092E003AE86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1718322254092E003AE86C /* ViewController.swift */; };
-		3A1718362254092E003AE86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718342254092E003AE86C /* Main.storyboard */; };
 		3A1718382254092F003AE86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718372254092F003AE86C /* Assets.xcassets */; };
 		3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718392254092F003AE86C /* LaunchScreen.storyboard */; };
+		3A17184322540DD2003AE86C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17184222540DD2003AE86C /* SplashVC.swift */; };
+		3A17184522540DE1003AE86C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184422540DE1003AE86C /* Splash.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A17182D2254092E003AE86C /* Newsville.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Newsville.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1718302254092E003AE86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A1718322254092E003AE86C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A1718352254092E003AE86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A1718372254092F003AE86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A17183A2254092F003AE86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A17183C2254092F003AE86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A17184222540DD2003AE86C /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
+		3A17184422540DE1003AE86C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +55,21 @@
 			isa = PBXGroup;
 			children = (
 				3A1718302254092E003AE86C /* AppDelegate.swift */,
-				3A1718322254092E003AE86C /* ViewController.swift */,
-				3A1718342254092E003AE86C /* Main.storyboard */,
 				3A1718372254092F003AE86C /* Assets.xcassets */,
 				3A1718392254092F003AE86C /* LaunchScreen.storyboard */,
 				3A17183C2254092F003AE86C /* Info.plist */,
+				3A17184622540DF5003AE86C /* View */,
 			);
 			path = Newsville;
+			sourceTree = "<group>";
+		};
+		3A17184622540DF5003AE86C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A17184222540DD2003AE86C /* SplashVC.swift */,
+				3A17184422540DE1003AE86C /* Splash.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,7 +132,7 @@
 			files = (
 				3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */,
 				3A1718382254092F003AE86C /* Assets.xcassets in Resources */,
-				3A1718362254092E003AE86C /* Main.storyboard in Resources */,
+				3A17184522540DE1003AE86C /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,22 +143,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A1718332254092E003AE86C /* ViewController.swift in Sources */,
 				3A1718312254092E003AE86C /* AppDelegate.swift in Sources */,
+				3A17184322540DD2003AE86C /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A1718342254092E003AE86C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A1718352254092E003AE86C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A1718392254092F003AE86C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,6 +285,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G53U7TC866;
 				INFOPLIST_FILE = Newsville/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G53U7TC866;
 				INFOPLIST_FILE = Newsville/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
