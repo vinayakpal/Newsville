@@ -12,3 +12,16 @@ struct Constants {
     static let onboarding = "onboarding"
     
 }
+
+struct Category {
+    static let list : [[String: String]] = [
+        
+        ["name": "business","colour": "9c27b0"],
+        ["name": "education","colour": "2196f3"],
+        ["name": "general","colour": "673ab7"],
+        ["name": "health","colour": "009688"],
+        ["name": "science","colour": "ff9800"],
+        ["name": "sports","colour": "4caf50"],
+        ["name": "technology","colour": "cddc39"]
+    ]
+}

@@ -66,6 +66,16 @@ extension OnboardingVC: PaperOnboardingDelegate {
     
     func onboardingWillTransitonToLeaving() {
         
-        print("leaving")
+        // GO to Home screen
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let homeVC = storyBoard.instantiateViewController(withIdentifier: "SidePanelVC") as! SidePanelVC
+        //let navController = UINavigationController(rootViewController: homeVC)
+        guard let window = UIApplication.shared.keyWindow else {return}
+        
+        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+           window.rootViewController = homeVC
+        }, completion: { completed in
+            UserDefaults.standard.set(true, forKey: Constants.onboarding)
+        })
     }
 }

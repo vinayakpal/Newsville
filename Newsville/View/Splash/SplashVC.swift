@@ -12,13 +12,12 @@ class SplashVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         launchSplashScreen()
         // Do any additional setup after loading the view.
     }
     
+    // launch splash with delay to display logo
     func launchSplashScreen() {
-        
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.5) {
             self.moveAheadInApp()
         }
@@ -26,24 +25,25 @@ class SplashVC: UIViewController {
     
     // runs after animation complete
     func moveAheadInApp() {
-        //let delegate = UIApplication.shared.delegate as! AppDelegate
-    
-        if let isOnboardingDone = UserDefaults.standard.value(forKey: Constants.onboarding) as? Bool, isOnboardingDone {
-            // Directly enters into Home screen
+        // check condition wheather onboarding screen launch or not
+        let isOnboardingLaunch = UserDefaults.standard.value(forKey: Constants.onboarding) as? Bool ?? false
+        
+        let sbOnboarding = UIStoryboard(name: "Onboarding", bundle: nil)
+        let onboarding = sbOnboarding.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
+        let sbSidePanel = UIStoryboard(name: "Home", bundle: nil)
+        let sidePanel = sbSidePanel.instantiateViewController(withIdentifier: "SidePanelVC") as! SidePanelVC
+
+        guard let window = UIApplication.shared.keyWindow else {return}
+
+        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
             
-        }else {
-            // GO to onboarding screen
-            let storyBoard = UIStoryboard(name: "Onboarding", bundle: nil)
-            let onboarding = storyBoard.instantiateViewController(withIdentifier: "OnboardingVC") as! OnboardingVC
-            //delegate.window?.rootViewController = onboarding
-            
-            guard let window = UIApplication.shared.keyWindow else {return}
- 
-            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: {
+            if isOnboardingLaunch {
+                window.rootViewController = sidePanel
+            } else {
                 window.rootViewController = onboarding
-            }, completion: { completed in
-                // maybe do something here
-            })
-        }
+            }
+        }, completion: { completed in
+            // maybe do something here
+        })
     }
 }

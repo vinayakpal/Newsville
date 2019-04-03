@@ -21,6 +21,17 @@
 		3A17186B225431B2003AE86C /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A171862225431B1003AE86C /* Ubuntu-Light.ttf */; };
 		3A17186C225431B2003AE86C /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A171863225431B1003AE86C /* UFL.txt */; };
 		3A17186E22543B33003AE86C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17186D22543B33003AE86C /* Constants.swift */; };
+		3A17187322549E14003AE86C /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17187222549E14003AE86C /* HomeVC.swift */; };
+		3A17187522549E20003AE86C /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A17187422549E20003AE86C /* Home.storyboard */; };
+		3A17187A2254A2F3003AE86C /* RearSidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1718792254A2F3003AE86C /* RearSidePanelVC.swift */; };
+		3A17187C2254B071003AE86C /* SidePanelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17187B2254B071003AE86C /* SidePanelVC.swift */; };
+		3A17187E2254C1C9003AE86C /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17187D2254C1C9003AE86C /* CategoryTableViewCell.swift */; };
+		3A1718812254D870003AE86C /* TrendingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17187F2254D870003AE86C /* TrendingCollectionViewCell.swift */; };
+		3A1718822254D870003AE86C /* TrendingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718802254D870003AE86C /* TrendingCollectionViewCell.xib */; };
+		3A1718842254E0E9003AE86C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1718832254E0E9003AE86C /* GradientView.swift */; };
+		3A1718872254F32F003AE86C /* NewsFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1718852254F32F003AE86C /* NewsFeedTableViewCell.swift */; };
+		3A1718882254F32F003AE86C /* NewsFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718862254F32F003AE86C /* NewsFeedTableViewCell.xib */; };
+		3A3D17F82255433400CA7633 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D17F72255433400CA7633 /* ShadowView.swift */; };
 		DFA57D8AB110AB36C7BCCA80 /* Pods_Newsville.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E35843FB6ED6D0000C118E /* Pods_Newsville.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +52,17 @@
 		3A171862225431B1003AE86C /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
 		3A171863225431B1003AE86C /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
 		3A17186D22543B33003AE86C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3A17187222549E14003AE86C /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		3A17187422549E20003AE86C /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3A1718792254A2F3003AE86C /* RearSidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RearSidePanelVC.swift; sourceTree = "<group>"; };
+		3A17187B2254B071003AE86C /* SidePanelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidePanelVC.swift; sourceTree = "<group>"; };
+		3A17187D2254C1C9003AE86C /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		3A17187F2254D870003AE86C /* TrendingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingCollectionViewCell.swift; sourceTree = "<group>"; };
+		3A1718802254D870003AE86C /* TrendingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendingCollectionViewCell.xib; sourceTree = "<group>"; };
+		3A1718832254E0E9003AE86C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		3A1718852254F32F003AE86C /* NewsFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewCell.swift; sourceTree = "<group>"; };
+		3A1718862254F32F003AE86C /* NewsFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedTableViewCell.xib; sourceTree = "<group>"; };
+		3A3D17F72255433400CA7633 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		74E35843FB6ED6D0000C118E /* Pods_Newsville.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsville.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92A61A0E39FE0CE40F3185CC /* Pods-Newsville.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsville.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newsville/Pods-Newsville.debug.xcconfig"; sourceTree = "<group>"; };
 		FDFCE9D3296BBB3AAA6D3F4D /* Pods-Newsville.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsville.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newsville/Pods-Newsville.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +117,8 @@
 			children = (
 				3A17186F22549AB3003AE86C /* Splash */,
 				3A17187022549ABF003AE86C /* OnBoarding */,
+				3A17187122549DE6003AE86C /* Home */,
+				3A17187822549EEA003AE86C /* Side Panel */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -112,6 +136,8 @@
 			children = (
 				3A17185822542BD3003AE86C /* Extensions.swift */,
 				3A17186D22543B33003AE86C /* Constants.swift */,
+				3A1718832254E0E9003AE86C /* GradientView.swift */,
+				3A3D17F72255433400CA7633 /* ShadowView.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -144,6 +170,29 @@
 				3A171855225417C7003AE86C /* Onboarding.storyboard */,
 			);
 			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		3A17187122549DE6003AE86C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3A17187222549E14003AE86C /* HomeVC.swift */,
+				3A1718852254F32F003AE86C /* NewsFeedTableViewCell.swift */,
+				3A1718862254F32F003AE86C /* NewsFeedTableViewCell.xib */,
+				3A17187F2254D870003AE86C /* TrendingCollectionViewCell.swift */,
+				3A1718802254D870003AE86C /* TrendingCollectionViewCell.xib */,
+				3A17187422549E20003AE86C /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		3A17187822549EEA003AE86C /* Side Panel */ = {
+			isa = PBXGroup;
+			children = (
+				3A1718792254A2F3003AE86C /* RearSidePanelVC.swift */,
+				3A17187D2254C1C9003AE86C /* CategoryTableViewCell.swift */,
+				3A17187B2254B071003AE86C /* SidePanelVC.swift */,
+			);
+			path = "Side Panel";
 			sourceTree = "<group>";
 		};
 		5929E570DD6C85B8C7FC4405 /* Frameworks */ = {
@@ -224,7 +273,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */,
+				3A17187522549E20003AE86C /* Home.storyboard in Resources */,
+				3A1718882254F32F003AE86C /* NewsFeedTableViewCell.xib in Resources */,
 				3A17186C225431B2003AE86C /* UFL.txt in Resources */,
+				3A1718822254D870003AE86C /* TrendingCollectionViewCell.xib in Resources */,
 				3A171864225431B2003AE86C /* Ubuntu-Medium.ttf in Resources */,
 				3A1718382254092F003AE86C /* Assets.xcassets in Resources */,
 				3A17186B225431B2003AE86C /* Ubuntu-Light.ttf in Resources */,
@@ -247,12 +299,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Newsville/Pods-Newsville-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,11 +343,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A17187A2254A2F3003AE86C /* RearSidePanelVC.swift in Sources */,
 				3A17186E22543B33003AE86C /* Constants.swift in Sources */,
+				3A1718872254F32F003AE86C /* NewsFeedTableViewCell.swift in Sources */,
+				3A1718842254E0E9003AE86C /* GradientView.swift in Sources */,
+				3A17187C2254B071003AE86C /* SidePanelVC.swift in Sources */,
 				3A1718312254092E003AE86C /* AppDelegate.swift in Sources */,
 				3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */,
+				3A17187322549E14003AE86C /* HomeVC.swift in Sources */,
+				3A1718812254D870003AE86C /* TrendingCollectionViewCell.swift in Sources */,
 				3A17184322540DD2003AE86C /* SplashVC.swift in Sources */,
+				3A3D17F82255433400CA7633 /* ShadowView.swift in Sources */,
 				3A17185922542BD3003AE86C /* Extensions.swift in Sources */,
+				3A17187E2254C1C9003AE86C /* CategoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

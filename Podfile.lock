@@ -1,16 +1,20 @@
 PODS:
   - paper-onboarding (5.0.0)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - paper-onboarding
+  - SWRevealViewController
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - paper-onboarding
+    - SWRevealViewController
 
 SPEC CHECKSUMS:
   paper-onboarding: a2e3a710fd27ac0b5635ec5490660e7ec09289b5
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-PODFILE CHECKSUM: 869ba2a9c5f08270bea27213de033c4ab0163fa8
+PODFILE CHECKSUM: d552971f734afde07004a953d6d042789ae7a37c
 
 COCOAPODS: 1.5.3
