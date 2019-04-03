@@ -12,13 +12,16 @@
 		3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718392254092F003AE86C /* LaunchScreen.storyboard */; };
 		3A17184322540DD2003AE86C /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17184222540DD2003AE86C /* SplashVC.swift */; };
 		3A17184522540DE1003AE86C /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184422540DE1003AE86C /* Splash.storyboard */; };
-		3A17184E225413EF003AE86C /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */; };
-		3A17184F225413EF003AE86C /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */; };
-		3A171850225413EF003AE86C /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */; };
-		3A171851225413EF003AE86C /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */; };
-		3A171852225413EF003AE86C /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A17184D225413EF003AE86C /* UFL.txt */; };
 		3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A171853225417BA003AE86C /* OnboardingVC.swift */; };
 		3A171856225417C7003AE86C /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A171855225417C7003AE86C /* Onboarding.storyboard */; };
+		3A17185922542BD3003AE86C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17185822542BD3003AE86C /* Extensions.swift */; };
+		3A171864225431B2003AE86C /* Ubuntu-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17185B225431B1003AE86C /* Ubuntu-Medium.ttf */; };
+		3A171866225431B2003AE86C /* Ubuntu-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17185D225431B1003AE86C /* Ubuntu-Regular.ttf */; };
+		3A171867225431B2003AE86C /* Ubuntu-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A17185E225431B1003AE86C /* Ubuntu-Bold.ttf */; };
+		3A17186B225431B2003AE86C /* Ubuntu-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A171862225431B1003AE86C /* Ubuntu-Light.ttf */; };
+		3A17186C225431B2003AE86C /* UFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A171863225431B1003AE86C /* UFL.txt */; };
+		3A17186E22543B33003AE86C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A17186D22543B33003AE86C /* Constants.swift */; };
+		DFA57D8AB110AB36C7BCCA80 /* Pods_Newsville.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74E35843FB6ED6D0000C118E /* Pods_Newsville.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,13 +32,18 @@
 		3A17183C2254092F003AE86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A17184222540DD2003AE86C /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		3A17184422540DE1003AE86C /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
-		3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
-		3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
-		3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
-		3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
-		3A17184D225413EF003AE86C /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
 		3A171853225417BA003AE86C /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		3A171855225417C7003AE86C /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		3A17185822542BD3003AE86C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3A17185B225431B1003AE86C /* Ubuntu-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Medium.ttf"; sourceTree = "<group>"; };
+		3A17185D225431B1003AE86C /* Ubuntu-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Regular.ttf"; sourceTree = "<group>"; };
+		3A17185E225431B1003AE86C /* Ubuntu-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Bold.ttf"; sourceTree = "<group>"; };
+		3A171862225431B1003AE86C /* Ubuntu-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ubuntu-Light.ttf"; sourceTree = "<group>"; };
+		3A171863225431B1003AE86C /* UFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UFL.txt; sourceTree = "<group>"; };
+		3A17186D22543B33003AE86C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74E35843FB6ED6D0000C118E /* Pods_Newsville.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Newsville.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92A61A0E39FE0CE40F3185CC /* Pods-Newsville.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsville.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Newsville/Pods-Newsville.debug.xcconfig"; sourceTree = "<group>"; };
+		FDFCE9D3296BBB3AAA6D3F4D /* Pods-Newsville.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Newsville.release.xcconfig"; path = "Pods/Target Support Files/Pods-Newsville/Pods-Newsville.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA57D8AB110AB36C7BCCA80 /* Pods_Newsville.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +63,8 @@
 			children = (
 				3A17182F2254092E003AE86C /* Newsville */,
 				3A17182E2254092E003AE86C /* Products */,
+				FD9344D88B436D063E71822C /* Pods */,
+				5929E570DD6C85B8C7FC4405 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +84,7 @@
 				3A1718392254092F003AE86C /* LaunchScreen.storyboard */,
 				3A17183C2254092F003AE86C /* Info.plist */,
 				3A17184722541393003AE86C /* Fonts */,
+				3A17185722542BB0003AE86C /* Supporting files */,
 				3A17184622540DF5003AE86C /* View */,
 			);
 			path = Newsville;
@@ -81,10 +93,8 @@
 		3A17184622540DF5003AE86C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3A17184222540DD2003AE86C /* SplashVC.swift */,
-				3A17184422540DE1003AE86C /* Splash.storyboard */,
-				3A171853225417BA003AE86C /* OnboardingVC.swift */,
-				3A171855225417C7003AE86C /* Onboarding.storyboard */,
+				3A17186F22549AB3003AE86C /* Splash */,
+				3A17187022549ABF003AE86C /* OnBoarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -92,21 +102,65 @@
 		3A17184722541393003AE86C /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				3A171848225413EF003AE86C /* Ubuntu */,
+				3A17185A225431B1003AE86C /* Ubuntu */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		3A171848225413EF003AE86C /* Ubuntu */ = {
+		3A17185722542BB0003AE86C /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				3A171849225413EF003AE86C /* Ubuntu-Medium.ttf */,
-				3A17184A225413EF003AE86C /* Ubuntu-Regular.ttf */,
-				3A17184B225413EF003AE86C /* Ubuntu-Bold.ttf */,
-				3A17184C225413EF003AE86C /* Ubuntu-Light.ttf */,
-				3A17184D225413EF003AE86C /* UFL.txt */,
+				3A17185822542BD3003AE86C /* Extensions.swift */,
+				3A17186D22543B33003AE86C /* Constants.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		3A17185A225431B1003AE86C /* Ubuntu */ = {
+			isa = PBXGroup;
+			children = (
+				3A17185B225431B1003AE86C /* Ubuntu-Medium.ttf */,
+				3A17185D225431B1003AE86C /* Ubuntu-Regular.ttf */,
+				3A17185E225431B1003AE86C /* Ubuntu-Bold.ttf */,
+				3A171862225431B1003AE86C /* Ubuntu-Light.ttf */,
+				3A171863225431B1003AE86C /* UFL.txt */,
 			);
 			path = Ubuntu;
+			sourceTree = "<group>";
+		};
+		3A17186F22549AB3003AE86C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3A17184222540DD2003AE86C /* SplashVC.swift */,
+				3A17184422540DE1003AE86C /* Splash.storyboard */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3A17187022549ABF003AE86C /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				3A171853225417BA003AE86C /* OnboardingVC.swift */,
+				3A171855225417C7003AE86C /* Onboarding.storyboard */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		5929E570DD6C85B8C7FC4405 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74E35843FB6ED6D0000C118E /* Pods_Newsville.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FD9344D88B436D063E71822C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92A61A0E39FE0CE40F3185CC /* Pods-Newsville.debug.xcconfig */,
+				FDFCE9D3296BBB3AAA6D3F4D /* Pods-Newsville.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A17183F2254092F003AE86C /* Build configuration list for PBXNativeTarget "Newsville" */;
 			buildPhases = (
+				CB765DD4A2034E5F2AED593C /* [CP] Check Pods Manifest.lock */,
 				3A1718292254092E003AE86C /* Sources */,
 				3A17182A2254092E003AE86C /* Frameworks */,
 				3A17182B2254092E003AE86C /* Resources */,
+				0F6CC087853DA7C5ACF8140B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,27 +224,76 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A17183B2254092F003AE86C /* LaunchScreen.storyboard in Resources */,
+				3A17186C225431B2003AE86C /* UFL.txt in Resources */,
+				3A171864225431B2003AE86C /* Ubuntu-Medium.ttf in Resources */,
 				3A1718382254092F003AE86C /* Assets.xcassets in Resources */,
-				3A171851225413EF003AE86C /* Ubuntu-Light.ttf in Resources */,
-				3A171850225413EF003AE86C /* Ubuntu-Bold.ttf in Resources */,
-				3A171852225413EF003AE86C /* UFL.txt in Resources */,
-				3A17184E225413EF003AE86C /* Ubuntu-Medium.ttf in Resources */,
+				3A17186B225431B2003AE86C /* Ubuntu-Light.ttf in Resources */,
 				3A171856225417C7003AE86C /* Onboarding.storyboard in Resources */,
-				3A17184F225413EF003AE86C /* Ubuntu-Regular.ttf in Resources */,
+				3A171867225431B2003AE86C /* Ubuntu-Bold.ttf in Resources */,
+				3A171866225431B2003AE86C /* Ubuntu-Regular.ttf in Resources */,
 				3A17184522540DE1003AE86C /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F6CC087853DA7C5ACF8140B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Newsville/Pods-Newsville-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/paper-onboarding/paper_onboarding.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/paper_onboarding.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Newsville/Pods-Newsville-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB765DD4A2034E5F2AED593C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Newsville-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3A1718292254092E003AE86C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A17186E22543B33003AE86C /* Constants.swift in Sources */,
 				3A1718312254092E003AE86C /* AppDelegate.swift in Sources */,
 				3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */,
 				3A17184322540DD2003AE86C /* SplashVC.swift in Sources */,
+				3A17185922542BD3003AE86C /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +429,7 @@
 		};
 		3A1718402254092F003AE86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92A61A0E39FE0CE40F3185CC /* Pods-Newsville.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -343,6 +449,7 @@
 		};
 		3A1718412254092F003AE86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDFCE9D3296BBB3AAA6D3F4D /* Pods-Newsville.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
