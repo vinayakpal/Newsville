@@ -39,6 +39,9 @@ class HomeVC: UIViewController {
         observeTrendingNewsFeeds()
         observeLatestNewsFeeds()
         // Do any additional setup after loading the view.
+        
+      //  FIXME:  remove after use
+        UserDefaults.standard.set(false, forKey: Constants.onboarding)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -115,6 +118,7 @@ class HomeVC: UIViewController {
         self.addShimmerFooter(of: tableView)
     }
     
+    // observe Api Results for trending collection result
     func observeTrendingNewsFeeds() {
         
         newsFeedViewModel.trendingFeedDataBinding()
@@ -131,6 +135,7 @@ class HomeVC: UIViewController {
         
     }
     
+    // observe Api Results for Home feed result
     func observeLatestNewsFeeds() {
         pageCount = 1
         newsFeedViewModel.category = category
@@ -138,6 +143,7 @@ class HomeVC: UIViewController {
         newsFeedViewModel.query = ""
         newsFeedViewModel.latestFeedDataBinding()
         
+        // Feed Data result
         newsFeedViewModel.latestNewsFeedBRObservable?.subscribe(onNext: { (response) in
             
             if response.count == 0 && self.latestFeedArray.count > 0 {
@@ -151,6 +157,7 @@ class HomeVC: UIViewController {
             
         }).disposed(by: self.disposeBag)
         
+        // Api Response result
         newsFeedViewModel.latestNewsResponseObservable?.subscribe(onNext: { (response) in
             
             if self.latestFeedArray.count == 0 && response.contains(Constants.feedUnavailable) {
@@ -214,6 +221,7 @@ extension HomeVC: UITableViewDataSource {
         return latestFeedArray.count
     }
     
+    // render all result on cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! NewsFeedTableViewCell
@@ -229,7 +237,7 @@ extension HomeVC: UITableViewDataSource {
         
         cell.feedAuthorLabel.text = latestNews.author
         cell.feedTitleLabel.text = latestNews.title
-        cell.feedPublishLabel.text = latestNews.publishedAt
+        cell.feedPublishLabel.text = self.feedPublished(at: latestNews.publishedAt)
         cell.feedDescLabel.text = latestNews.description
         
         let urlString = latestNews.imageUrl
@@ -237,6 +245,7 @@ extension HomeVC: UITableViewDataSource {
             cell.feedImageView.sd_setImage(with: imageUrl, placeholderImage: UIImage(named: "placeholder"))
         }
         
+        // Calling APi after every 10 feeds with increment in page
         if indexPath.item == latestFeedArray.count - 1 && isApiCall {
             self.isApiCall = false
             pageCount += 1

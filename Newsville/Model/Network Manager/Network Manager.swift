@@ -27,6 +27,7 @@ class NetworkManagerModel {
     var latestNewsApiResponse: BehaviorRelay<String> = BehaviorRelay(value: "")
     var searchNewsApiResponse: BehaviorRelay<String> = BehaviorRelay(value: "")
     
+    // Hitting Api for collection view trending results
     func trendingFeedModelApi() {
         
         let fetchApi = GetTrendingNewsApi()
@@ -49,12 +50,13 @@ class NetworkManagerModel {
                 }
             }
             
-        }, onError: { (error) in
-            print(error.localizedDescription)
+        }, onError: { (_) in
+
         }).disposed(by: self.disposeBag)
         
     }
     
+    // Hitting Api for main feed results
     func latestFeedModelApi() {
         
         let fetchApi = GetLatestNewsApi()
@@ -82,9 +84,7 @@ class NetworkManagerModel {
         fetchApi.queryValues.append(String(page))
         
         let urlString = fetchApi.createUrlString()
-        
-        print(urlString)
-        
+   
         RxAlamofire.json(.get, urlString, parameters: nil, encoding: JSONEncoding.default, headers: Constants.header).asObservable().subscribe(onNext: { json in
             
             if let json = json as? [String: Any] {
@@ -107,6 +107,7 @@ class NetworkManagerModel {
         }).disposed(by: self.disposeBag)
     }
     
+    // Hitting Api for searched result
     func searchFeedModelApi() {
         
         let fetchApi = GetTrendingNewsApi()

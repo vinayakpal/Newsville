@@ -30,7 +30,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-O5-Ehu" customClass="ShadowView" customModule="Newsville" customModuleProvider="target">
                         <rect key="frame" x="12" y="10" width="296" height="301.5"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-cP-aiV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-cP-aiV">
                                 <rect key="frame" x="0.0" y="0.0" width="296" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="JpQ-fh-dtF"/>
@@ -161,4 +161,7 @@
             <point key="canvasLocation" x="120" y="74.662668665667169"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="placeholder" width="414" height="250"/>
+    </resources>
 </document>

@@ -30,6 +30,7 @@ class RearSidePanelVC: UIViewController {
         startUserHomeInteraction()
     }
     
+    // confirm Header view height
     func checkHeaderViewHeight() {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let navBarHeight = UINavigationController().navigationBar.frame.height
@@ -41,12 +42,14 @@ class RearSidePanelVC: UIViewController {
         }
     }
     
+    // initialise tableview
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
     }
     
+    // stop front View interaction while accessing rear view
     func stopUserHomeInteraction() {
         let frontViewController = self.revealViewController().frontViewController as! UINavigationController
         let homeVC = frontViewController.viewControllers.first as! HomeVC
@@ -55,6 +58,7 @@ class RearSidePanelVC: UIViewController {
         frontViewController.setNavigationBarHidden(false, animated: true)
     }
     
+    // Grant front View interaction access
     func startUserHomeInteraction() {
         let frontViewController = self.revealViewController().frontViewController as! UINavigationController
         let homeVC = frontViewController.viewControllers.first as! HomeVC
@@ -69,6 +73,7 @@ extension RearSidePanelVC: UITableViewDelegate {
         return 80
     }
     
+    // select categoies to go back on front view for shwing result
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let sb = UIStoryboard(name: "Home", bundle: nil)
@@ -90,6 +95,7 @@ extension RearSidePanelVC: UITableViewDataSource {
         return Category.list.count
     }
     
+    // render results on cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryTableViewCell

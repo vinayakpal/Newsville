@@ -40,6 +40,7 @@ class SearchVC: UIViewController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
     }
     
+    // Programatic approach to add search bar property on NavBar
     func setupSearchBar() {
         searchBar.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 40)
         searchBar.heightAnchor.constraint(equalToConstant: 44).isActive = true
@@ -55,6 +56,7 @@ class SearchVC: UIViewController {
         
     }
     
+    // intitialise SearchBar user interaction
     func setupSearchBarButton() {
         searchBarButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: nil)
         
@@ -73,6 +75,7 @@ class SearchVC: UIViewController {
         }, completion: nil)
     }
     
+    // initalise tableView
     func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -85,6 +88,7 @@ class SearchVC: UIViewController {
         
     }
     
+    // Observe Api Response result
     func observeLatestSearchNews(with query: String) {
         
         self.searchFeedArray.removeAll()
@@ -102,6 +106,7 @@ class SearchVC: UIViewController {
         
         if isResponseObserved {
             isResponseObserved = false
+            // observe News feeds
             newsFeedViewModel.searchNewsFeedBRObservable?.subscribe(onNext: { (response) in
                 
                 if response.count == 0 && self.searchFeedArray.count > 0 {
@@ -115,15 +120,16 @@ class SearchVC: UIViewController {
                 
             }).disposed(by: self.disposeBag)
             
+            // observe Api response
             newsFeedViewModel.searchNewsResponseObservable?.subscribe(onNext: { (response) in
                 
                 if self.searchFeedArray.count == 0 && response.contains(Constants.feedUnavailable) {
-                    print("No News Feed")
+                    // notify when no feed result found
                     self.removeShimmerHeader(of: self.tableView)
                     self.removeShimmerFooter(of: self.tableView)
                     self.showAlert(msg: "We didn't find any result for\n\(self.searchString)")
                 }else if self.searchFeedArray.count == 0 && response.contains(Constants.networkError)  {
-                    print("Network error")
+                    // notify when internet not available
                     self.removeShimmerHeader(of: self.tableView)
                     self.removeShimmerFooter(of: self.tableView)
                     self.showAlert(msg: "It seems you're out of Internet Connection")
@@ -138,6 +144,7 @@ class SearchVC: UIViewController {
 
 extension SearchVC: UISearchBarDelegate {
     
+    // Deliver Search result when search button click action occue
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
 
         if let searchQuery = searchBar.text {
@@ -149,6 +156,7 @@ extension SearchVC: UISearchBarDelegate {
         }
     }
     
+    // Search Bar cancel button action
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         
         if searchString != "" {
@@ -163,6 +171,7 @@ extension SearchVC: UISearchBarDelegate {
 }
 
 extension SearchVC: UITableViewDelegate {
+    // cell selection result
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let searchedNews = self.searchFeedArray[indexPath.item]
@@ -177,6 +186,7 @@ extension SearchVC: UITableViewDataSource {
         return searchFeedArray.count
     }
     
+    // render result on cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! NewsFeedTableViewCell
@@ -199,7 +209,7 @@ extension SearchVC: UITableViewDataSource {
         
         cell.feedAuthorLabel.text = latestNews.author
         cell.feedTitleLabel.text = latestNews.title
-        cell.feedPublishLabel.text = latestNews.publishedAt
+        cell.feedPublishLabel.text = self.feedPublished(at: latestNews.publishedAt)
         cell.feedDescLabel.text = latestNews.description
         
         let urlString = latestNews.imageUrl
@@ -220,9 +230,4 @@ extension SearchVC: UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
-}
-
-extension SearchVC {
-    
-    
 }

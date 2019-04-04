@@ -49,11 +49,11 @@ extension OnboardingVC: PaperOnboardingDataSource {
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
         
-        let trendingItem = OnboardingItemInfo(informationImage: UIImage(named: "fire")!, title: "Top Headlines", description: "Get the latest top headlines", pageIcon: UIImage(), color: UIColor(hex: "2E6EC8"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
+        let trendingItem = OnboardingItemInfo(informationImage: UIImage(named: "fire")!, title: "Top Headlines", description: "Get the latest top headlines on the go!", pageIcon: UIImage(), color: UIColor(hex: "2E6EC8"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
         
-        let searchItem = OnboardingItemInfo(informationImage: UIImage(named: "search")!, title: "Search", description: "Search any kind of news", pageIcon: UIImage(), color: UIColor(hex: "FFC107"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
+        let searchItem = OnboardingItemInfo(informationImage: UIImage(named: "search")!, title: "Search", description: "Find out any kind of news across the globe.", pageIcon: UIImage(), color: UIColor(hex: "FFC107"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
         
-        let getStartedItem = OnboardingItemInfo(informationImage: UIImage(named: "swipe")!, title: "Get Started", description: "Swipe left to Get Started", pageIcon: UIImage(), color: UIColor(hex: "FF005F"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
+        let getStartedItem = OnboardingItemInfo(informationImage: UIImage(named: "swipe")!, title: "Get Started", description: "Swipe left to Get Started.", pageIcon: UIImage(), color: UIColor(hex: "FF005F"), titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: UIFont(name: "Ubuntu-Bold", size: 22) ?? UIFont(), descriptionFont: UIFont(name: "Ubuntu-Regular", size: 14) ?? UIFont())
         
         return [trendingItem,searchItem,getStartedItem] [index]
         

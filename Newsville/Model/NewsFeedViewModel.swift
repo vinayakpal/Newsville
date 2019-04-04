@@ -24,12 +24,14 @@ class NewsFeedViewModel {
     var latestNewsResponseObservable: Observable<String>?
     var searchNewsResponseObservable: Observable<String>?
     
+    // trending feed model call and data bind
     func trendingFeedDataBinding() {
         
         newsFeedModel.trendingFeedModelApi()
         trendingNewsFeedBRObservable = newsFeedModel.trendingNewsFeedBRelay.asObservable()
     }
     
+    // Home feed model call and data bind
     func latestFeedDataBinding() {
         newsFeedModel.category = category
         newsFeedModel.page = page
@@ -41,6 +43,7 @@ class NewsFeedViewModel {
         latestNewsResponseObservable = newsFeedModel.latestNewsApiResponse.asObservable()
     }
     
+    // Search feed model call and data bind
     func searchFeedDataBinding() {
         newsFeedModel.category = category
         newsFeedModel.page = page

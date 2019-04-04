@@ -51,6 +51,7 @@ class GetTrendingNewsApi: Url {
     }
 }
 
+// Get Api for top news
 class GetLatestNewsApi: Url {
     var urlScheme: String = Constants.urlScreme
     var urlHost: String = Constants.urlHost

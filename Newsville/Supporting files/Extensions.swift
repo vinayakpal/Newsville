@@ -90,6 +90,7 @@ extension UIViewController {
         return titleView
     }
     
+    // tableview header for adding shimmer loader
     func addShimmerHeader(of tableView: UITableView) {
         let nib = UIView()
         let nibView = Bundle.main.loadNibNamed("LatestFeedPlaceholder", owner: self, options: nil)?.first as! LatestFeedPlaceholder
@@ -108,6 +109,7 @@ extension UIViewController {
         
     }
     
+    // tableview header for removing shimmer loader
     func removeShimmerHeader(of tableView: UITableView) {
         let nib = UIView()
         nib.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
@@ -115,6 +117,7 @@ extension UIViewController {
         
     }
     
+    // tableview footer for adding shimmer loader
     func addShimmerFooter(of tableView: UITableView) {
         let bottomNib = UIView()
         let nibView = Bundle.main.loadNibNamed("LatestFeedPlaceholder", owner: self, options: nil)?.first as! LatestFeedPlaceholder
@@ -134,6 +137,7 @@ extension UIViewController {
         
     }
     
+    // tableview footer for removing shimmer loader
     func removeShimmerFooter(of tableView: UITableView) {
         
         let nib = UIView()
@@ -149,8 +153,83 @@ extension UIViewController {
         alertController.addAction(alertAction)
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    // converting formatted time String to readable time format
+    func feedPublished(at publishedTime : String) -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZ"
+        let dateString = dateFormatter.date(from: publishedTime)
+        guard let timeStemp = dateString?.timeIntervalSince1970 else {return ""}
+        
+        var timeElapsed : String = ""
+        let currentTime = Int64(Date().timeIntervalSince1970 * 1000)
+        let feedPublishedTime = Int64(timeStemp * 1000)
+        
+        let miliTime : TimeInterval  = TimeInterval(currentTime - feedPublishedTime)
+        
+        let noOfSec = miliTime / 1000
+        
+        let sec    : Int = Int(fabs(noOfSec))
+        let min    : Int = sec / 60
+        let hours  : Int = min / 60
+        let days   : Int = hours / 24
+        let weeks  : Int = days / 7
+        let months : Int = days / 30
+        let years  : Int = days / 365
+        
+        if years == 0 {
+            if months == 0 {
+                if weeks == 0 {
+                    if days == 0 {
+                        if hours == 0 {
+                            if min == 0 {
+                                timeElapsed = String(format : "%d sec ago",sec)
+                            }else {
+                                timeElapsed = String(format: "%d min ago",min)
+                            }
+                        }else {
+                            if hours == 1 {
+                                timeElapsed = String(format : "%d hr ago",hours)
+                            }else {
+                                timeElapsed = String(format: "%d hrs ago",hours)
+                            }
+                        }
+                    }else {
+                        if days == 1 {
+                            timeElapsed = String(format : "%d day ago",days)
+                        }else {
+                            timeElapsed = String(format: "%d days ago",days)
+                        }
+                    }
+                }else {
+                    if weeks == 1 {
+                        timeElapsed = String(format : "%d week ago",weeks)
+                    }else {
+                        timeElapsed = String(format: "%d weeks ago",weeks)
+                    }
+                }
+            }else {
+                if months == 1 {
+                    timeElapsed = String(format : "%d month ago",months)
+                }else {
+                    timeElapsed = String(format: "%d months ago",months)
+                }
+            }
+        }else {
+            if years == 1 {
+                timeElapsed = String(format : "%d year ago",years)
+            }else {
+                timeElapsed = String(format: "%d years ago",years)
+            }
+        }
+        
+        return timeElapsed
+        
+    }
 }
 
+// Dategate methods for in App browser
 extension UIViewController : KINWebBrowserDelegate {
     public func webBrowser(_ webBrowser: KINWebBrowserViewController!, didStartLoading URL: URL!) {
         
@@ -160,22 +239,6 @@ extension UIViewController : KINWebBrowserDelegate {
     public func webBrowser(_ webBrowser: KINWebBrowserViewController!, didFinishLoading URL: URL!) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        
-//        let urlStr = NSString(format : "%@",URL! as CVarArg)
-//
-//        if (!(urlStr.range(of: "twitter").location == NSNotFound)) {
-//            let match = ".com/"
-//            var pretel : NSString?
-//            var postTel : NSString?
-//            let scanner = Scanner.init(string: urlStr as String)
-//
-//            scanner.scanUpTo(match, into: &pretel)
-//            scanner.scanString(match, into: nil)
-//            postTel = urlStr.substring(from: scanner.scanLocation) as NSString
-//
-//            webBrowser.title = String(format : "Twitter | @%@",postTel ?? "")
-//
-//        }
         
     }
     
