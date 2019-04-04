@@ -1,3 +1,5 @@
+![Header](https://github.com/vinayakpal/Newsville/blob/master/newsvilleLogo.png)
+
 # Newsville
 An App that helps to deliver latest news on the go.
 
