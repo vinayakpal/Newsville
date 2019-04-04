@@ -44,6 +44,103 @@ extension UIViewController {
         webBroswer?.tintColor = UIColor.black
         webBroswer?.delegate = self
     }
+    
+    // set title and subtitle on Navbar
+    func setTitle(title:String, subtitle:String) -> UIView {
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        
+        titleLabel.backgroundColor = UIColor.clear
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont.init(name: "Ubuntu-Regular", size: 12)
+        titleLabel.text = title
+        titleLabel.sizeToFit()
+        
+        let subtitleLabel = UILabel(frame: CGRect(x: 0, y: 20, width: 0, height: 0))
+        subtitleLabel.backgroundColor = UIColor.clear
+        subtitleLabel.textColor = UIColor.black
+        subtitleLabel.font = UIFont.init(name: "Ubuntu-Bold", size: 16)
+        subtitleLabel.text = subtitle
+        subtitleLabel.lineBreakMode = NSLineBreakMode.byTruncatingMiddle
+        subtitleLabel.sizeToFit()
+        
+        let maxWidth = self.view.frame.width * 0.7
+        
+        if subtitleLabel.frame.size.width > maxWidth {
+            subtitleLabel.frame.size.width = maxWidth
+        }
+        
+        let titleView = UIView(frame: CGRect(x:0,y:0,width: max(titleLabel.frame.size.width, subtitleLabel.frame.size.width),height: 50))
+        
+        
+        
+        //titleView.backgroundColor = Colors.blackColor
+        titleView.addSubview(titleLabel)
+        titleView.addSubview(subtitleLabel)
+        
+        let widthDiff = subtitleLabel.frame.size.width - titleLabel.frame.size.width
+        
+        if widthDiff < 0 {
+            let newX = widthDiff / 2
+            subtitleLabel.frame.origin.x = abs(newX)
+        } else {
+            let newX = widthDiff / 2
+            titleLabel.frame.origin.x = newX
+        }
+        
+        return titleView
+    }
+    
+    func addShimmerHeader(of tableView: UITableView) {
+        let nib = UIView()
+        let nibView = Bundle.main.loadNibNamed("LatestFeedPlaceholder", owner: self, options: nil)?.first as! LatestFeedPlaceholder
+        nibView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 370)
+        nibView.l1.startShimmering()
+        nibView.l2.startShimmering()
+        nibView.l3.startShimmering()
+        nibView.l4.startShimmering()
+        nibView.l5.startShimmering()
+        nibView.l6.startShimmering()
+        nibView.l7.startShimmering()
+        nibView.l8.startShimmering()
+        nib.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 370)
+        nib.addSubview(nibView)
+        tableView.tableHeaderView = nib
+        
+    }
+    
+    func removeShimmerHeader(of tableView: UITableView) {
+        let nib = UIView()
+        nib.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
+        tableView.tableHeaderView = nib
+        
+    }
+    
+    func addShimmerFooter(of tableView: UITableView) {
+        let bottomNib = UIView()
+        let nibView = Bundle.main.loadNibNamed("LatestFeedPlaceholder", owner: self, options: nil)?.first as! LatestFeedPlaceholder
+        nibView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 370)
+        nibView.l1.startShimmering()
+        nibView.l2.startShimmering()
+        nibView.l3.startShimmering()
+        nibView.l4.startShimmering()
+        nibView.l5.startShimmering()
+        nibView.l6.startShimmering()
+        nibView.l7.startShimmering()
+        nibView.l8.startShimmering()
+        
+        bottomNib.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 370)
+        bottomNib.addSubview(nibView)
+        tableView.tableFooterView = bottomNib
+        
+    }
+    
+    func removeShimmerFooter(of tableView: UITableView) {
+        
+        let nib = UIView()
+        nib.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 0)
+        tableView.tableFooterView = nib
+        
+    }
 }
 
 extension UIViewController : KINWebBrowserDelegate {

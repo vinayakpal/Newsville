@@ -72,7 +72,7 @@
                 <outlet property="trendingImageView" destination="kuy-q2-3L5" id="gdQ-0O-6M2"/>
                 <outlet property="trendingTitleLabel" destination="ffO-Au-EUZ" id="pRk-D9-k02"/>
             </connections>
-            <point key="canvasLocation" x="125.59999999999999" y="30.584707646176913"/>
+            <point key="canvasLocation" x="210" y="24"/>
         </collectionViewCell>
     </objects>
 </document>

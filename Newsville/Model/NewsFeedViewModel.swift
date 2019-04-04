@@ -18,6 +18,7 @@ class NewsFeedViewModel {
     var query: String = ""
     var trendingNewsFeedBRObservable: Observable<[NewsArticleData]>?
     var latestNewsFeedBRObservable: Observable<[NewsArticleData]>?
+    var searchNewsFeedBRObservable: Observable<[NewsArticleData]>?
     
     func trendingFeedDataBinding() {
         
@@ -33,5 +34,15 @@ class NewsFeedViewModel {
         newsFeedModel.latestFeedModelApi()
         
         latestNewsFeedBRObservable = newsFeedModel.latestNewsFeedBRelay.asObservable()
+    }
+    
+    func searchFeedDataBinding() {
+        newsFeedModel.category = category
+        newsFeedModel.page = page
+        newsFeedModel.query = query
+        
+        newsFeedModel.searchFeedModelApi()
+        
+        searchNewsFeedBRObservable = newsFeedModel.searchNewsFeedBRelay.asObservable()
     }
 }

@@ -33,6 +33,8 @@
 		3A1718882254F32F003AE86C /* NewsFeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A1718862254F32F003AE86C /* NewsFeedTableViewCell.xib */; };
 		3A18EFF52255783F00A65EF3 /* LatestFeedPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18EFF42255783F00A65EF3 /* LatestFeedPlaceholder.swift */; };
 		3A18EFF72255784700A65EF3 /* LatestFeedPlaceholder.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A18EFF62255784700A65EF3 /* LatestFeedPlaceholder.xib */; };
+		3A18EFFA2255E4C700A65EF3 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A18EFF92255E4C700A65EF3 /* SearchVC.swift */; };
+		3A18EFFC2255E4D100A65EF3 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A18EFFB2255E4D100A65EF3 /* Search.storyboard */; };
 		3A3D17F82255433400CA7633 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D17F72255433400CA7633 /* ShadowView.swift */; };
 		3AC1833022554DD6006B60C5 /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1832F22554DD6006B60C5 /* Url.swift */; };
 		3AC1833422555048006B60C5 /* NewsFeedMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC1833322555048006B60C5 /* NewsFeedMapper.swift */; };
@@ -70,6 +72,8 @@
 		3A1718862254F32F003AE86C /* NewsFeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsFeedTableViewCell.xib; sourceTree = "<group>"; };
 		3A18EFF42255783F00A65EF3 /* LatestFeedPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestFeedPlaceholder.swift; sourceTree = "<group>"; };
 		3A18EFF62255784700A65EF3 /* LatestFeedPlaceholder.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LatestFeedPlaceholder.xib; sourceTree = "<group>"; };
+		3A18EFF92255E4C700A65EF3 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		3A18EFFB2255E4D100A65EF3 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		3A3D17F72255433400CA7633 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		3AC1832F22554DD6006B60C5 /* Url.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Url.swift; sourceTree = "<group>"; };
 		3AC1833322555048006B60C5 /* NewsFeedMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedMapper.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				3A17187022549ABF003AE86C /* OnBoarding */,
 				3A17187122549DE6003AE86C /* Home */,
 				3A17187822549EEA003AE86C /* Side Panel */,
+				3A18EFF82255E4AB00A65EF3 /* Search */,
 				3A18EFF32255780E00A65EF3 /* Placeholder */,
 			);
 			path = View;
@@ -218,6 +223,15 @@
 				3A18EFF62255784700A65EF3 /* LatestFeedPlaceholder.xib */,
 			);
 			path = Placeholder;
+			sourceTree = "<group>";
+		};
+		3A18EFF82255E4AB00A65EF3 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				3A18EFF92255E4C700A65EF3 /* SearchVC.swift */,
+				3A18EFFB2255E4D100A65EF3 /* Search.storyboard */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		3AC1833122555016006B60C5 /* Model */ = {
@@ -335,6 +349,7 @@
 				3A17187522549E20003AE86C /* Home.storyboard in Resources */,
 				3A18EFF72255784700A65EF3 /* LatestFeedPlaceholder.xib in Resources */,
 				3A1718882254F32F003AE86C /* NewsFeedTableViewCell.xib in Resources */,
+				3A18EFFC2255E4D100A65EF3 /* Search.storyboard in Resources */,
 				3A17186C225431B2003AE86C /* UFL.txt in Resources */,
 				3A1718822254D870003AE86C /* TrendingCollectionViewCell.xib in Resources */,
 				3A171864225431B2003AE86C /* Ubuntu-Medium.ttf in Resources */,
@@ -432,6 +447,7 @@
 				3A1718312254092E003AE86C /* AppDelegate.swift in Sources */,
 				3A171854225417BA003AE86C /* OnboardingVC.swift in Sources */,
 				3AC1833422555048006B60C5 /* NewsFeedMapper.swift in Sources */,
+				3A18EFFA2255E4C700A65EF3 /* SearchVC.swift in Sources */,
 				3AC1833A22555D6A006B60C5 /* NewsFeedViewModel.swift in Sources */,
 				3A18EFF52255783F00A65EF3 /* LatestFeedPlaceholder.swift in Sources */,
 				3A17187322549E14003AE86C /* HomeVC.swift in Sources */,

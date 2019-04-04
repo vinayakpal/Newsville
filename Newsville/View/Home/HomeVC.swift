@@ -41,15 +41,41 @@ class HomeVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationItem.title = ""
+    }
+    
     // Nav Bar left menu button action
     func callNavBarElements() {
+        // left menu button action
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(self.revealViewController()?.revealToggle(_:))
         }
+        // view gesture to open side panel
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
+        // searchbar button action
+        searchButton
+            .rx
+            .tap
+            .subscribe(onNext : {
+            // present searchViewController when search button is clicked
+            let searchVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
+            self.navigationController?.pushViewController(searchVC, animated: true)
+        }).disposed(by: self.disposeBag)
+        
+        // setting navabar center image
         let logoImage = UIImage(named: "newsville_nav")
         self.navigationItem.titleView = UIImageView(image: logoImage)
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
     
     // collectionview flowlayout settlement
@@ -84,9 +110,9 @@ class HomeVC: UIViewController {
         tableView.estimatedRowHeight = 350
         tableView.rowHeight = UITableView.automaticDimension
         tableView.separatorStyle = .none
-        
         let feedNib = UINib(nibName: "NewsFeedTableViewCell", bundle: nil)
         tableView.register(feedNib, forCellReuseIdentifier: "FeedCell")
+        self.addShimmerFooter(of: tableView)
     }
     
     func observeTrendingNewsFeeds() {
@@ -110,13 +136,13 @@ class HomeVC: UIViewController {
         newsFeedViewModel.category = category
         newsFeedViewModel.page = pageCount
         newsFeedViewModel.query = ""
-        
         newsFeedViewModel.latestFeedDataBinding()
         
         newsFeedViewModel.latestNewsFeedBRObservable?.subscribe(onNext: { (response) in
             
             if response.count == 0 && self.latestFeedArray.count > 0 {
                 self.isApiCall = false
+                self.removeShimmerFooter(of: self.tableView)
             }else {
                 self.isApiCall = true
                 self.latestFeedArray += response
@@ -185,12 +211,7 @@ extension HomeVC: UITableViewDataSource {
             cell.sourceBaseView.isHidden = true
         }
         
-        if latestNews.author != "" {
-            cell.feedAuthorLabel.text = latestNews.author
-        }else {
-            cell.feedAuthorLabel.text = "N/A"
-        }
-        
+        cell.feedAuthorLabel.text = latestNews.author
         cell.feedTitleLabel.text = latestNews.title
         cell.feedPublishLabel.text = latestNews.publishedAt
         cell.feedDescLabel.text = latestNews.description

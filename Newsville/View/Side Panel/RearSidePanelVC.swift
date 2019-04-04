@@ -20,6 +20,16 @@ class RearSidePanelVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        stopUserHomeInteraction()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        startUserHomeInteraction()
+    }
+    
     func checkHeaderViewHeight() {
         let statusBarHeight = UIApplication.shared.statusBarFrame.height
         let navBarHeight = UINavigationController().navigationBar.frame.height
@@ -35,6 +45,21 @@ class RearSidePanelVC: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+    }
+    
+    func stopUserHomeInteraction() {
+        let frontViewController = self.revealViewController().frontViewController as! UINavigationController
+        let homeVC = frontViewController.viewControllers.first as! HomeVC
+        homeVC.collectionView.isUserInteractionEnabled = false
+        homeVC.tableView.isUserInteractionEnabled = false
+        frontViewController.setNavigationBarHidden(false, animated: true)
+    }
+    
+    func startUserHomeInteraction() {
+        let frontViewController = self.revealViewController().frontViewController as! UINavigationController
+        let homeVC = frontViewController.viewControllers.first as! HomeVC
+        homeVC.collectionView.isUserInteractionEnabled = true
+        homeVC.tableView.isUserInteractionEnabled = true
     }
 }
 
