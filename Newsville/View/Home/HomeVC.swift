@@ -39,9 +39,7 @@ class HomeVC: UIViewController {
         observeTrendingNewsFeeds()
         observeLatestNewsFeeds()
         // Do any additional setup after loading the view.
-        
-      //  FIXME:  remove after use
-        UserDefaults.standard.set(false, forKey: Constants.onboarding)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
