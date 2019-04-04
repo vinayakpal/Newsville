@@ -6,6 +6,14 @@ target 'Newsville' do
   use_frameworks!
   pod 'paper-onboarding'
   pod 'SWRevealViewController'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Alamofire'
+  pod 'RxAlamofire'
+  pod 'ObjectMapper'
+  pod 'SDWebImage'
+  pod 'KINWebBrowser'
+  pod 'UIView+Shimmer'
 
   # Pods for Newsville
 

@@ -9,6 +9,9 @@
 import UIKit
 
 class TrendingCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var trendingImageView: UIImageView!
+    @IBOutlet weak var trendingTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

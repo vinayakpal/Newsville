@@ -27,7 +27,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-O5-Ehu" customClass="ShadowView" customModule="Newsville" customModuleProvider="target">
                         <rect key="frame" x="12" y="10" width="296" height="301.5"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-cP-aiV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a9q-cP-aiV">
                                 <rect key="frame" x="0.0" y="0.0" width="296" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="JpQ-fh-dtF"/>
@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="0.5" id="HhC-UR-r7M"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaF-d6-vdF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaF-d6-vdF">
                                 <rect key="frame" x="10" y="270.5" width="276" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="YsD-8b-aMV"/>
@@ -151,6 +151,7 @@
                 <outlet property="feedImageView" destination="a9q-cP-aiV" id="cNZ-ox-Ab5"/>
                 <outlet property="feedPublishLabel" destination="QI8-Pk-Qcj" id="sUY-S1-3Mo"/>
                 <outlet property="feedTitleLabel" destination="7Jl-DB-fp4" id="x06-p5-81J"/>
+                <outlet property="sourceBaseView" destination="5hx-bF-oDW" id="y6g-9G-HmJ"/>
                 <outlet property="sourceNameLabel" destination="24o-qo-GjB" id="twW-t8-l7U"/>
             </connections>
             <point key="canvasLocation" x="120" y="74.662668665667169"/>

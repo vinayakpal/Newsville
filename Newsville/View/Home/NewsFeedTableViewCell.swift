@@ -12,6 +12,7 @@ class NewsFeedTableViewCell: UITableViewCell {
 
     @IBOutlet weak var feedImageView: UIImageView!
     @IBOutlet weak var sourceNameLabel: UILabel!
+    @IBOutlet weak var sourceBaseView: UIView!
     @IBOutlet weak var feedDescLabel: UILabel!
     @IBOutlet weak var feedTitleLabel: UILabel!
     @IBOutlet weak var feedAuthorLabel: UILabel!

@@ -24,7 +24,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dims" translatesAutoresizingMaskIntoConstraints="NO" id="kuy-q2-3L5">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kuy-q2-3L5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w0p-XE-qCw" customClass="GradientView" customModule="Newsville" customModuleProvider="target">
@@ -68,10 +68,11 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="375" height="165"/>
+            <connections>
+                <outlet property="trendingImageView" destination="kuy-q2-3L5" id="gdQ-0O-6M2"/>
+                <outlet property="trendingTitleLabel" destination="ffO-Au-EUZ" id="pRk-D9-k02"/>
+            </connections>
             <point key="canvasLocation" x="125.59999999999999" y="30.584707646176913"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="dims" width="1200" height="630"/>
-    </resources>
 </document>

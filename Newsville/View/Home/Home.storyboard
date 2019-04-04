@@ -101,7 +101,7 @@
                         <viewLayoutGuide key="safeArea" id="A06-r1-vmt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Newsville" id="Ph7-1A-xbP">
-                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="0Tk-sV-f5g">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="drawer" id="0Tk-sV-f5g">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="7Fv-pN-0OH">
@@ -112,6 +112,7 @@
                         <outlet property="collectionView" destination="eR0-qP-xuz" id="Wvw-oq-BVM"/>
                         <outlet property="collectionViewFlowLayout" destination="244-cQ-xOZ" id="kaq-Wg-8Bp"/>
                         <outlet property="menuButton" destination="0Tk-sV-f5g" id="dey-6W-8AC"/>
+                        <outlet property="pageControl" destination="eRr-4k-syy" id="OeL-gs-yDC"/>
                         <outlet property="searchButton" destination="7Fv-pN-0OH" id="YF9-hc-7gB"/>
                         <outlet property="tableView" destination="ccE-Ql-evr" id="pBx-Ne-eF9"/>
                     </connections>
@@ -228,4 +229,7 @@
             <point key="canvasLocation" x="897" y="-269"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="drawer" width="28" height="20"/>
+    </resources>
 </document>
