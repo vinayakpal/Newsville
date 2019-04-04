@@ -114,6 +114,24 @@ class SearchVC: UIViewController {
                 }
                 
             }).disposed(by: self.disposeBag)
+            
+            newsFeedViewModel.searchNewsResponseObservable?.subscribe(onNext: { (response) in
+                
+                if self.searchFeedArray.count == 0 && response.contains(Constants.feedUnavailable) {
+                    print("No News Feed")
+                    self.removeShimmerHeader(of: self.tableView)
+                    self.removeShimmerFooter(of: self.tableView)
+                    self.showAlert(msg: "We didn't find any result for\n\(self.searchString)")
+                }else if self.searchFeedArray.count == 0 && response.contains(Constants.networkError)  {
+                    print("Network error")
+                    self.removeShimmerHeader(of: self.tableView)
+                    self.removeShimmerFooter(of: self.tableView)
+                    self.showAlert(msg: "It seems you're out of Internet Connection")
+                }else {
+                    // do nothing
+                }
+                
+            }).disposed(by: self.disposeBag)
         }
     }
 }

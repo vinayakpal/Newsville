@@ -14,6 +14,8 @@ struct Constants {
     static let urlScreme = "https"
     static let urlHost = "newsapi.org"
     static let header: [String:String] = ["Content-Type":"application/json"]
+    static let feedUnavailable = "noFeedAvailable"
+    static let networkError = "networkError"
     
 }
 

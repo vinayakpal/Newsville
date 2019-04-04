@@ -150,6 +150,22 @@ class HomeVC: UIViewController {
             }
             
         }).disposed(by: self.disposeBag)
+        
+        newsFeedViewModel.latestNewsResponseObservable?.subscribe(onNext: { (response) in
+            
+            if self.latestFeedArray.count == 0 && response.contains(Constants.feedUnavailable) {
+                // No feed avaialble
+                self.removeShimmerFooter(of: self.tableView)
+                self.showAlert(msg: "We didn't find any feed")
+            }else if self.latestFeedArray.count == 0 && response.contains(Constants.networkError) {
+                // network error
+                self.removeShimmerFooter(of: self.tableView)
+                self.showAlert(msg: "It seems you're out of Internet Connection")
+            }else {
+                // do nothing
+            }
+            
+        }).disposed(by: self.disposeBag)
     }
 }
 

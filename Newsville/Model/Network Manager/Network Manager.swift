@@ -24,6 +24,9 @@ class NetworkManagerModel {
     var latestNewsFeedBRelay: BehaviorRelay<[NewsArticleData]> = BehaviorRelay(value: [])
     var searchNewsFeedBRelay: BehaviorRelay<[NewsArticleData]> = BehaviorRelay(value: [])
     
+    var latestNewsApiResponse: BehaviorRelay<String> = BehaviorRelay(value: "")
+    var searchNewsApiResponse: BehaviorRelay<String> = BehaviorRelay(value: "")
+    
     func trendingFeedModelApi() {
         
         let fetchApi = GetTrendingNewsApi()
@@ -90,11 +93,17 @@ class NetworkManagerModel {
                 
                 if let article = fetchData?.article {
                     self.latestNewsFeedBRelay.accept(article)
+                    
+                    if article.count == 0 && self.page == 1 {
+                        self.latestNewsApiResponse.accept(Constants.feedUnavailable)
+                    }
                 }
             }
             
-        }, onError: { (error) in
-            print(error.localizedDescription)
+        }, onError: { (_) in
+            
+            self.latestNewsApiResponse.accept(Constants.networkError)
+            
         }).disposed(by: self.disposeBag)
     }
     
@@ -117,11 +126,17 @@ class NetworkManagerModel {
                 
                 if let article = fetchData?.article {
                     self.searchNewsFeedBRelay.accept(article)
+                    
+                    if article.count == 0 && self.page == 1 {
+                        self.searchNewsApiResponse.accept(Constants.feedUnavailable)
+                    }
                 }
             }
             
-        }, onError: { (error) in
-            print(error.localizedDescription)
+        }, onError: { _ in
+            
+            self.searchNewsApiResponse.accept(Constants.networkError)
+            
         }).disposed(by: self.disposeBag)
         
     }

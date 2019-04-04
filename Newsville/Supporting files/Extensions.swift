@@ -141,6 +141,14 @@ extension UIViewController {
         tableView.tableFooterView = nib
         
     }
+    
+    // show alert control
+    func showAlert(msg : String){
+        let alertController = UIAlertController(title: "Newsville", message: msg, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }
 
 extension UIViewController : KINWebBrowserDelegate {
